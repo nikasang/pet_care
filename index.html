@@ -305,141 +305,6 @@
       background: #eaf3ed;
     }
 
-    .reviews {
-      background: #f7fbf8;
-    }
-
-    .review-summary {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 18px;
-      align-items: stretch;
-      margin-bottom: 18px;
-    }
-
-    .rating-card,
-    .review-card {
-      border: 1px solid rgba(122, 168, 145, .26);
-      border-radius: 8px;
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .rating-card {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .rating-score {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      color: var(--ink);
-      font-weight: 900;
-    }
-
-    .rating-score strong {
-      font-size: clamp(52px, 7vw, 78px);
-      line-height: .95;
-    }
-
-    .rating-score span {
-      color: var(--muted);
-      font-size: 16px;
-      font-weight: 800;
-    }
-
-    .rating-stars {
-      color: var(--gold);
-      font-size: 22px;
-      letter-spacing: 0;
-    }
-
-    .rating-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .review-highlights {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .review-highlight {
-      padding: 18px;
-      border-radius: 8px;
-      background: #eaf3ed;
-      border: 1px solid rgba(122, 168, 145, .2);
-    }
-
-    .review-highlight strong {
-      display: block;
-      font-size: 24px;
-      line-height: 1.1;
-    }
-
-    .review-highlight span {
-      display: block;
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .review-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .review-card {
-      min-height: 260px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .review-card blockquote {
-      margin: 0;
-      color: #344744;
-      font-size: 16px;
-    }
-
-    .review-person {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .review-avatar {
-      width: 48px;
-      height: 48px;
-      flex: 0 0 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      color: var(--white);
-      background: var(--sage);
-      font-weight: 900;
-    }
-
-    .review-person strong,
-    .review-person span {
-      display: block;
-    }
-
-    .review-person span {
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
     .environment {
       background: var(--white);
     }
@@ -657,6 +522,128 @@
       line-height: 1.25;
     }
 
+    .testimonials {
+      background: #f6efe6;
+      overflow: hidden;
+    }
+
+    .testimonial-shell {
+      position: relative;
+    }
+
+    .testimonial-viewport {
+      overflow: hidden;
+      padding: 4px;
+    }
+
+    .testimonial-track {
+      display: flex;
+      gap: 18px;
+      transition: transform .55s ease;
+      will-change: transform;
+    }
+
+    .testimonial-card {
+      min-width: calc((100% - 36px) / 3);
+      padding: 24px;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid rgba(122, 168, 145, .28);
+      box-shadow: 0 16px 36px rgba(30, 45, 43, .1);
+    }
+
+    .testimonial-stars {
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    .testimonial-card blockquote {
+      margin: 16px 0 22px;
+      color: #2c3f3b;
+      font-size: 17px;
+      line-height: 1.72;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .testimonial-author strong,
+    .testimonial-author span {
+      display: block;
+    }
+
+    .testimonial-author span {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .pet-chip {
+      flex: 0 0 auto;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #38524c;
+      background: var(--mint);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .testimonial-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .testimonial-arrows {
+      display: flex;
+      gap: 10px;
+    }
+
+    .testimonial-btn {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(30, 45, 43, .18);
+      border-radius: 50%;
+      color: var(--ink);
+      background: var(--white);
+      cursor: pointer;
+      box-shadow: 0 10px 22px rgba(30, 45, 43, .08);
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .testimonial-dots {
+      display: flex;
+      gap: 9px;
+    }
+
+    .testimonial-dot {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(30, 45, 43, .24);
+      cursor: pointer;
+    }
+
+    .testimonial-dot.is-active {
+      width: 28px;
+      border-radius: 999px;
+      background: var(--coral);
+    }
+
     .booking {
       background: var(--ink);
       color: var(--white);
@@ -727,12 +714,14 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1fr;
       gap: 24px;
     }
 
     .map {
-      min-height: 330px;
+      order: 2;
+      width: 100%;
+      min-height: clamp(420px, 48vw, 560px);
       border-radius: 8px;
       overflow: hidden;
       position: relative;
@@ -915,6 +904,8 @@
     }
 
     .contact {
+      order: 1;
+      max-width: 100%;
       padding: 30px;
       border-radius: 8px;
       background: var(--white);
@@ -991,8 +982,6 @@
       .hero-facts,
       .services,
       .price-grid,
-      .review-summary,
-      .review-grid,
       .experience,
       .booking-layout,
       .contact-grid {
@@ -1011,8 +1000,8 @@
         transform: none;
       }
 
-      .review-highlights {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+      .testimonial-card {
+        min-width: calc((100% - 18px) / 2);
       }
 
       .photo-panel {
@@ -1065,15 +1054,9 @@
 
       .service,
       .price,
-      .rating-card,
-      .review-card,
       .contact,
       .booking-form {
         padding: 22px;
-      }
-
-      .review-highlights {
-        grid-template-columns: 1fr;
       }
 
       .booking-form {
@@ -1089,7 +1072,7 @@
       }
 
       .map {
-        min-height: 360px;
+        min-height: 430px;
       }
 
       .map-label {
@@ -1131,6 +1114,15 @@
         right: auto;
         bottom: 22px;
       }
+
+      .testimonial-card {
+        min-width: 100%;
+      }
+
+      .testimonial-controls {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+      }
     }
   </style>
 </head>
@@ -1146,6 +1138,7 @@
         <a href="#pricing">套餐</a>
         <a href="#experience">门店</a>
         <a href="#environment">环境</a>
+        <a href="#testimonials">评价</a>
         <a href="#contact">联系</a>
       </div>
       <a class="nav-action" href="#booking">预约</a>
@@ -1329,66 +1322,79 @@
       </div>
     </section>
 
-    <section class="reviews" id="reviews">
+    <section class="testimonials" id="testimonials">
       <div class="section-inner">
         <div class="section-title">
-          <h2>用户评价</h2>
-          <p>来自近期到店家长的真实反馈，看看大家最在意的卫生、耐心和护理效果。</p>
+          <h2>客户评价</h2>
+          <p>真实到店反馈，记录毛孩子从紧张到放松的每一次变化，也帮新家长更安心地做选择。</p>
         </div>
-        <div class="review-summary">
-          <div class="rating-card">
-            <div>
-              <div class="rating-score"><strong>4.9</strong><span>/ 5.0</span></div>
-              <div class="rating-stars" aria-label="五星好评">★★★★★</div>
+        <div class="testimonial-shell" aria-label="客户评价轮播">
+          <div class="testimonial-viewport">
+            <div class="testimonial-track">
+              <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="五星评价">★★★★★</div>
+                <blockquote>第一次带我家胆小猫洗澡，本来很担心应激。店员先让它适应环境，全程有照片反馈，回家毛也很蓬松。</blockquote>
+                <div class="testimonial-author">
+                  <div><strong>陈女士</strong><span>英短猫 豆包</span></div>
+                  <span class="pet-chip">低敏洗护</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="五星评价">★★★★★</div>
+                <blockquote>金毛换季掉毛特别严重，做完深层梳理后家里明显少飞毛。护理师还教了日常梳毛频率，很实用。</blockquote>
+                <div class="testimonial-author">
+                  <div><strong>刘先生</strong><span>金毛 Lucky</span></div>
+                  <span class="pet-chip">换毛护理</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="五星评价">★★★★★</div>
+                <blockquote>造型修得很自然，没有一刀切的感觉。眼周和嘴边处理得很干净，拍照特别上镜，下次还会预约。</blockquote>
+                <div class="testimonial-author">
+                  <div><strong>周小姐</strong><span>泰迪 奶茶</span></div>
+                  <span class="pet-chip">精修造型</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="五星评价">★★★★★</div>
+                <blockquote>我家狗狗怕吹风，之前洗澡会一直发抖。这次护理师分段烘干，声音控制得很好，状态比以前稳定很多。</blockquote>
+                <div class="testimonial-author">
+                  <div><strong>王女士</strong><span>比熊 糯米</span></div>
+                  <span class="pet-chip">安抚护理</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="五星评价">★★★★★</div>
+                <blockquote>价格和项目说得很清楚，没有临时加项。洗完会说明皮肤红点和耳朵情况，感觉不是单纯洗完就结束。</blockquote>
+                <div class="testimonial-author">
+                  <div><strong>赵先生</strong><span>柴犬 皮皮</span></div>
+                  <span class="pet-chip">透明报价</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="五星评价">★★★★★</div>
+                <blockquote>店里味道很干净，猫狗也会错峰接待。预约制不用等太久，对上班族很友好。</blockquote>
+                <div class="testimonial-author">
+                  <div><strong>林女士</strong><span>布偶猫 星星</span></div>
+                  <span class="pet-chip">预约到店</span>
+                </div>
+              </article>
             </div>
-            <p>近 30 天到店评价里，家长最常提到的是“洗得干净”“不催不赶”和“反馈很细”。</p>
           </div>
-          <div class="review-highlights" aria-label="评价亮点">
-            <div class="review-highlight">
-              <strong>96%</strong>
-              <span>家长愿意再次预约</span>
+          <div class="testimonial-controls">
+            <div class="testimonial-dots" aria-label="客户评价轮播导航">
+              <button class="testimonial-dot is-active" type="button" aria-label="查看第 1 组评价"></button>
+              <button class="testimonial-dot" type="button" aria-label="查看第 2 组评价"></button>
+              <button class="testimonial-dot" type="button" aria-label="查看第 3 组评价"></button>
+              <button class="testimonial-dot" type="button" aria-label="查看第 4 组评价"></button>
+              <button class="testimonial-dot" type="button" aria-label="查看第 5 组评价"></button>
+              <button class="testimonial-dot" type="button" aria-label="查看第 6 组评价"></button>
             </div>
-            <div class="review-highlight">
-              <strong>38 分钟</strong>
-              <span>平均预约确认时间</span>
-            </div>
-            <div class="review-highlight">
-              <strong>280+</strong>
-              <span>累计护理反馈照片</span>
+            <div class="testimonial-arrows">
+              <button class="testimonial-btn testimonial-prev" type="button" aria-label="上一组客户评价">&lsaquo;</button>
+              <button class="testimonial-btn testimonial-next" type="button" aria-label="下一组客户评价">&rsaquo;</button>
             </div>
           </div>
-        </div>
-        <div class="review-grid">
-          <article class="review-card">
-            <blockquote>“第一次带布丁来洗澡，洗护师会先问皮肤情况，吹干也很耐心。回家后毛蓬蓬的，味道很清爽。”</blockquote>
-            <div class="review-person">
-              <span class="review-avatar" aria-hidden="true">林</span>
-              <div>
-                <strong>林女士</strong>
-                <span>柯基 · 精致全套</span>
-              </div>
-            </div>
-          </article>
-          <article class="review-card">
-            <blockquote>“我家猫胆子小，以前洗澡会很紧张。这里是预约制，环境安静，洗完还发了耳朵和指甲的护理照片。”</blockquote>
-            <div class="review-person">
-              <span class="review-avatar" aria-hidden="true">周</span>
-              <div>
-                <strong>周先生</strong>
-                <span>英短 · 轻享洗护</span>
-              </div>
-            </div>
-          </article>
-          <article class="review-card">
-            <blockquote>“泰迪修完造型很圆润，四肢线条也干净。店员还教了在家怎么梳毛，后面打结少了很多。”</blockquote>
-            <div class="review-person">
-              <span class="review-avatar" aria-hidden="true">陈</span>
-              <div>
-                <strong>陈女士</strong>
-                <span>泰迪 · 造型美容</span>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -1509,6 +1515,13 @@
     const nextSlide = document.querySelector(".carousel-btn.next");
     let activeSlide = 0;
     let carouselTimer;
+    const testimonialTrack = document.querySelector(".testimonial-track");
+    const testimonialCards = [...document.querySelectorAll(".testimonial-card")];
+    const testimonialDots = [...document.querySelectorAll(".testimonial-dot")];
+    const testimonialPrevious = document.querySelector(".testimonial-prev");
+    const testimonialNext = document.querySelector(".testimonial-next");
+    let activeTestimonial = 0;
+    let testimonialTimer;
 
     const showSlide = (index) => {
       activeSlide = (index + slides.length) % slides.length;
@@ -1543,6 +1556,55 @@
     });
 
     restartCarousel();
+
+    const getVisibleTestimonials = () => {
+      if (window.matchMedia("(max-width: 560px)").matches) return 1;
+      if (window.matchMedia("(max-width: 860px)").matches) return 2;
+      return 3;
+    };
+
+    const getMaxTestimonialIndex = () => {
+      return Math.max(0, testimonialCards.length - getVisibleTestimonials());
+    };
+
+    const showTestimonial = (index) => {
+      const maxIndex = getMaxTestimonialIndex();
+      activeTestimonial = (index + maxIndex + 1) % (maxIndex + 1);
+      const card = testimonialCards[0];
+      const gap = Number.parseFloat(window.getComputedStyle(testimonialTrack).gap) || 0;
+      const offset = activeTestimonial * (card.offsetWidth + gap);
+      testimonialTrack.style.transform = `translateX(-${offset}px)`;
+      testimonialDots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("is-active", dotIndex === activeTestimonial);
+        dot.hidden = dotIndex > maxIndex;
+      });
+    };
+
+    const restartTestimonialCarousel = () => {
+      window.clearInterval(testimonialTimer);
+      testimonialTimer = window.setInterval(() => showTestimonial(activeTestimonial + 1), 4300);
+    };
+
+    testimonialPrevious.addEventListener("click", () => {
+      showTestimonial(activeTestimonial - 1);
+      restartTestimonialCarousel();
+    });
+
+    testimonialNext.addEventListener("click", () => {
+      showTestimonial(activeTestimonial + 1);
+      restartTestimonialCarousel();
+    });
+
+    testimonialDots.forEach((dot, dotIndex) => {
+      dot.addEventListener("click", () => {
+        showTestimonial(dotIndex);
+        restartTestimonialCarousel();
+      });
+    });
+
+    window.addEventListener("resize", () => showTestimonial(activeTestimonial));
+    showTestimonial(0);
+    restartTestimonialCarousel();
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
