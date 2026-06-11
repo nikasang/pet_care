@@ -305,6 +305,141 @@
       background: #eaf3ed;
     }
 
+    .reviews {
+      background: #f7fbf8;
+    }
+
+    .review-summary {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .rating-card,
+    .review-card {
+      border: 1px solid rgba(122, 168, 145, .26);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .rating-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .rating-score {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .rating-score strong {
+      font-size: clamp(52px, 7vw, 78px);
+      line-height: .95;
+    }
+
+    .rating-score span {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .rating-stars {
+      color: var(--gold);
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .rating-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .review-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .review-highlight {
+      padding: 18px;
+      border-radius: 8px;
+      background: #eaf3ed;
+      border: 1px solid rgba(122, 168, 145, .2);
+    }
+
+    .review-highlight strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .review-highlight span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .review-card {
+      min-height: 260px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .review-card blockquote {
+      margin: 0;
+      color: #344744;
+      font-size: 16px;
+    }
+
+    .review-person {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-avatar {
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--sage);
+      font-weight: 900;
+    }
+
+    .review-person strong,
+    .review-person span {
+      display: block;
+    }
+
+    .review-person span {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     .environment {
       background: var(--white);
     }
@@ -856,6 +991,8 @@
       .hero-facts,
       .services,
       .price-grid,
+      .review-summary,
+      .review-grid,
       .experience,
       .booking-layout,
       .contact-grid {
@@ -872,6 +1009,10 @@
 
       .price.featured {
         transform: none;
+      }
+
+      .review-highlights {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .photo-panel {
@@ -924,9 +1065,15 @@
 
       .service,
       .price,
+      .rating-card,
+      .review-card,
       .contact,
       .booking-form {
         padding: 22px;
+      }
+
+      .review-highlights {
+        grid-template-columns: 1fr;
       }
 
       .booking-form {
@@ -1178,6 +1325,70 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>用户评价</h2>
+          <p>来自近期到店家长的真实反馈，看看大家最在意的卫生、耐心和护理效果。</p>
+        </div>
+        <div class="review-summary">
+          <div class="rating-card">
+            <div>
+              <div class="rating-score"><strong>4.9</strong><span>/ 5.0</span></div>
+              <div class="rating-stars" aria-label="五星好评">★★★★★</div>
+            </div>
+            <p>近 30 天到店评价里，家长最常提到的是“洗得干净”“不催不赶”和“反馈很细”。</p>
+          </div>
+          <div class="review-highlights" aria-label="评价亮点">
+            <div class="review-highlight">
+              <strong>96%</strong>
+              <span>家长愿意再次预约</span>
+            </div>
+            <div class="review-highlight">
+              <strong>38 分钟</strong>
+              <span>平均预约确认时间</span>
+            </div>
+            <div class="review-highlight">
+              <strong>280+</strong>
+              <span>累计护理反馈照片</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <blockquote>“第一次带布丁来洗澡，洗护师会先问皮肤情况，吹干也很耐心。回家后毛蓬蓬的，味道很清爽。”</blockquote>
+            <div class="review-person">
+              <span class="review-avatar" aria-hidden="true">林</span>
+              <div>
+                <strong>林女士</strong>
+                <span>柯基 · 精致全套</span>
+              </div>
+            </div>
+          </article>
+          <article class="review-card">
+            <blockquote>“我家猫胆子小，以前洗澡会很紧张。这里是预约制，环境安静，洗完还发了耳朵和指甲的护理照片。”</blockquote>
+            <div class="review-person">
+              <span class="review-avatar" aria-hidden="true">周</span>
+              <div>
+                <strong>周先生</strong>
+                <span>英短 · 轻享洗护</span>
+              </div>
+            </div>
+          </article>
+          <article class="review-card">
+            <blockquote>“泰迪修完造型很圆润，四肢线条也干净。店员还教了在家怎么梳毛，后面打结少了很多。”</blockquote>
+            <div class="review-person">
+              <span class="review-avatar" aria-hidden="true">陈</span>
+              <div>
+                <strong>陈女士</strong>
+                <span>泰迪 · 造型美容</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
